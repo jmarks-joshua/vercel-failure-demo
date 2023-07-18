@@ -61,6 +61,9 @@ dependencies:
   prisma:
     specifier: ^5.0.0
     version: 5.0.0
+  process:
+    specifier: ^0.11.10
+    version: 0.11.10
   ramda:
     specifier: ^0.29.0
     version: 0.29.0
@@ -2939,6 +2942,11 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': 5.0.0
+    dev: false
+
+  /process@0.11.10:
+    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
+    engines: {node: '>= 0.6.0'}
     dev: false
 
   /prop-types@15.8.1:
