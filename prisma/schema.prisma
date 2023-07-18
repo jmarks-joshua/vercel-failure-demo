@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type CasesData {
+  applicant          CasesDataPartyDetails
+  children           CasesDataChildren[]
+  further_respondents CasesDataPartyDetails[]
+}
+
+type CasesDataCaseDetails {
+  caseNumber  String?
+}
+
+
+type CasesDataChildren {
+  id                      String
+  name                    String?
+}
+
+type CasesDataPartyDetails {
+  id    String
+  name  String?
+}
+
+
+model cases {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  case_information      CasesData
+}
