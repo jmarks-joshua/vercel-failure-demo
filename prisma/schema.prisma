@@ -21,11 +21,13 @@ type CasesDataCaseDetails {
 type CasesDataChildren {
   id                      String
   name                    String?
+  test                    String?
 }
 
 type CasesDataPartyDetails {
   id    String
   name  String?
+  differentData String?
 }
 
 
